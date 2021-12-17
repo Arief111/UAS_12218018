@@ -94,7 +94,6 @@ for i in (HandleFileProduksi.index):
 DataBaru1 = {"Nama Negara" : NamaBaru1,"Kode" : KodeBaru1, "Tahun" : TahunBaru1,
             "Produksi" : ProduksiBaru1, "Region" : RegionBaru1, "Sub-Region" : SubRegionBaru1}
 HandleFileProduksi1 = pd.DataFrame(DataBaru1)
-st.write(HandleFileProduksi1)
 ProduksiBaru = [0]
 NamaBaru = [0]
 j = 0
