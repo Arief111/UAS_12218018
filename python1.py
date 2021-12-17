@@ -181,7 +181,7 @@ if(Token == "1. Melihat grafik Produksi Minyak Negara Tertentu"):
 
 elif(Token == "2. Melihat Beberapa Negara Dengan Produksi Minyak Terbesar Pada Tahun Tertentu"):
     try:
-        Ranking = st.number_input("Silahkan Masukkan Berapa Negara : ")
+        Ranking = st.number_input("Silahkan Masukkan Berapa Negara : ", min_value = 0, step = 1)
         Tahun = st.number_input("Silahkan Masukkan Tahun : ", min_value = 1971, max_value = 2015, step = 1)
         DataFrameTahun = HandleFileProduksi1.loc[HandleFileProduksi1["Tahun"]==Tahun]
         DataFrameTahunSort = DataFrameTahun.sort_values(["Produksi"], ascending=[0])
@@ -193,7 +193,7 @@ elif(Token == "2. Melihat Beberapa Negara Dengan Produksi Minyak Terbesar Pada T
 
 elif(Token == "3. Melihat Beberapa Negara Dengan Produksi Kumulatif Terbesar"):
     try :
-        BanyakNegara = st.number_input("Silahkan Input Berapa Banyak Negara Dengan Produksi Terbesar yang Akan Ditampilkan : ")
+        BanyakNegara = st.number_input("Silahkan Input Berapa Banyak Negara Dengan Produksi Terbesar yang Akan Ditampilkan : ", min_value = 0, step = 1)
         if (BanyakNegara < len(NamaBaru)) & (BanyakNegara > 0):
             show1 = DataFrameBaru[0:BanyakNegara]
             show1.plot(kind="bar", x = "Nama Negara", y = "Produksi Kumulatif", title = "Data " + str(BanyakNegara) + " Negara Dengan Produksi Minyak Terbesar")
@@ -207,7 +207,7 @@ elif(Token == "3. Melihat Beberapa Negara Dengan Produksi Kumulatif Terbesar"):
 
 elif (Token == "4. Melihat Negara dengan Produksi Ekstrim (Produksi Maksimum, Minimum dan Nol) Pada Tahun Tertentu"):
     try :
-        Tahun1 = st.number_input("Masukkan Tahun : ")
+        Tahun1 = st.number_input("Masukkan Tahun : ", min_value = 1971, max_value = 2015, step = 1)
         DataFrameTahun1 = HandleFileProduksiTanpaNol.loc[HandleFileProduksiTanpaNol["Tahun"]==Tahun1]
         imax = DataFrameTahun1["Produksi"].idxmax()
         a = HandleFileProduksiTanpaNol.loc[imax, "Nama Negara"]
