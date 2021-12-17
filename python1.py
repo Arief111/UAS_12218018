@@ -12,8 +12,8 @@ st.write("Our first DataFrame")
 st.write(pd.DataFrame({'Saya': ["Arief"],'Pacar': ["Hoa"]}))
 #Kotnr
 
-int_val = st.slider('Seconds', min_value=1, max_value=10, value=5, step=1)
-int_val = st.number_input('Seconds', min_value=1, max_value=10, value=5, step=1)
+number = st.number_input('Insert a number')
+st.write('The current number is ', number)
 
 HandleCodeNegara = open("kode_negara_lengkap.json")
 HandleFileProduksi = pd.read_csv("produksi_minyak_mentah.csv")
