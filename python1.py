@@ -3,6 +3,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import json
 from pandas.core.frame import DataFrame
+import plotly.graph_objects as go
 
 from pandas.io.formats.format import DataFrameFormatter
 st.title("Aplikasi Penghitung Minyak")
@@ -195,8 +196,7 @@ elif(Token == "3. Melihat Beberapa Negara Dengan Produksi Kumulatif Terbesar"):
         BanyakNegara = st.number_input("Silahkan Input Berapa Banyak Negara Dengan Produksi Terbesar yang Akan Ditampilkan : ", min_value = 0, step = 1)
         if (BanyakNegara < len(NamaBaru)) & (BanyakNegara > 0):
             show1 = DataFrameBaru[0:BanyakNegara]
-            st.write(show1)
-            st.bar_chart(show1)
+            show2 = go.Figure(data=[go.Pie(labels=NamaBaru[0:BanyakNegara],values = ProduksiBaru[0:BanyakNegara-1])])
         else :
             st.write("Belum ada Data Valid yang Dapat Ditampilkan")
     except :
