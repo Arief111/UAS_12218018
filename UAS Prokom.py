@@ -1,4 +1,5 @@
 import streamlit as st
+'''
 import matplotlib.pyplot as plt
 import pandas as pd
 import json
@@ -9,6 +10,7 @@ from pandas.io.formats.format import DataFrameFormatter
 HandleCodeNegara = open("D:/kode_negara_lengkap.json")
 HandleFileProduksi = pd.read_csv("D:/produksi_minyak_mentah.csv")
 DataCode = json.load(HandleCodeNegara)
+'''
 st.title("Welcome to Streamlit!")
 
 st.write("Our first DataFrame")
