@@ -199,7 +199,7 @@ elif(Token == "3. Melihat Beberapa Negara Dengan Produksi Kumulatif Terbesar"):
             show1 = DataFrameBaru[0:BanyakNegara]
             st.write(show1)
             show2 = pd.DataFrame(np.random.randn(20,BanyakNegara),Columns = NamaBaru[0:BanyakNegara-1])
-            st.bar_chart(show2)
+            st.bar_chart(DataFrameBaru)
         else :
             st.write("Belum ada Data Valid yang Dapat Ditampilkan")
     except :
