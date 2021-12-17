@@ -232,7 +232,7 @@ elif (Token == 4):
         st.write ("Nama Negara : " + str(HandleFileProduksiNol.loc[imin, "Nama Negara"]))
         st.write("Kode Negara : " + str(HandleFileProduksiNol.loc[imin, "Region"]))
         st.write("Region : " + str(HandleFileProduksiNol.loc[imin, "Sub-Region"]))
-        st.write("Sub-Region : + str(HandleFileProduksiNol.loc[imin, "Sub-Region"]))
+        st.write("Sub-Region : " + str(HandleFileProduksiNol.loc[imin, "Sub-Region"]))
         st.write("Produksi Tahun " + str(Tahun1) + " : " + str(HandleFileProduksiNol.loc[imin, "Produksi"]))
         for i in (DataFrameBaru.index):
             if (HandleFileProduksiNol.loc[imin, "Nama Negara"] == DataFrameBaru.loc[i,"Nama Negara"]):
