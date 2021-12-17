@@ -213,8 +213,8 @@ elif (Token == "4. Melihat Negara dengan Produksi Ekstrim (Produksi Maksimum, Mi
         a = HandleFileProduksiTanpaNol.loc[imax, "Nama Negara"]
         st.write("Negara Dengan Penghasil Minyak Terbanyak Pada Tahun " + str(Tahun1))
         st.write("--Nama Negara : " + str(HandleFileProduksiTanpaNol.loc[imax, "Nama Negara"]))
-        st.write("--Kode Negara : " + str(HandleFileProduksiTanpaNol.loc[imax, "Region"]))
-        st.write("--Region : " + str(HandleFileProduksiTanpaNol.loc[imax, "Sub-Region"]))
+        st.write("--Kode Negara : " + str(HandleFileProduksiTanpaNol.loc[imax, "Kode"]))
+        st.write("--Region : " + str(HandleFileProduksiTanpaNol.loc[imax, "Region"]))
         st.write("--Sub-Region : " + str(HandleFileProduksiTanpaNol.loc[imax, "Sub-Region"]))
         st.write("--Produksi Tahun " + str(Tahun1) + " : " + str(HandleFileProduksiTanpaNol.loc[imax, "Produksi"]))
         for i in (DataFrameBaru.index):
@@ -226,8 +226,8 @@ elif (Token == "4. Melihat Negara dengan Produksi Ekstrim (Produksi Maksimum, Mi
         imin = DataFrameTahun1["Produksi"].idxmin()
         st.write("Negara Dengan Penghasil Minyak Terkecil (Bukan Nol) Pada Tahun " + str(Tahun1))
         st.write("--Nama Negara         : " + str(HandleFileProduksiTanpaNol.loc[imin, "Nama Negara"]))
-        st.write("--Kode Negara         : " + str(HandleFileProduksiTanpaNol.loc[imin, "Region"]))
-        st.write("--Region              : " + str(HandleFileProduksiTanpaNol.loc[imin, "Sub-Region"]))
+        st.write("--Kode Negara         : " + str(HandleFileProduksiTanpaNol.loc[imin, "Kode"]))
+        st.write("--Region              : " + str(HandleFileProduksiTanpaNol.loc[imin, "Region"]))
         st.write("--Sub-Region          : " + str(HandleFileProduksiTanpaNol.loc[imin, "Sub-Region"]))
         st.write("--Produksi Tahun " + str(Tahun1) + "      : " + str(HandleFileProduksiTanpaNol.loc[imin, "Produksi"]))
         for i in (DataFrameBaru.index):
@@ -239,8 +239,8 @@ elif (Token == "4. Melihat Negara dengan Produksi Ekstrim (Produksi Maksimum, Mi
         imin = DataFrameTahun1["Produksi"].idxmin()
         st.write("Negara Dengan Penghasil Minyak Nol Pada Tahun " + str(Tahun1))
         st.write ("--Nama Negara : " + str(HandleFileProduksiNol.loc[imin, "Nama Negara"]))
-        st.write("--Kode Negara : " + str(HandleFileProduksiNol.loc[imin, "Region"]))
-        st.write("--Region : " + str(HandleFileProduksiNol.loc[imin, "Sub-Region"]))
+        st.write("--Kode Negara : " + str(HandleFileProduksiNol.loc[imin, "Kode"]))
+        st.write("--Region : " + str(HandleFileProduksiNol.loc[imin, "Region"]))
         st.write("--Sub-Region : " + str(HandleFileProduksiNol.loc[imin, "Sub-Region"]))
         st.write("--Produksi Tahun " + str(Tahun1) + " : " + str(HandleFileProduksiNol.loc[imin, "Produksi"]))
         for i in (DataFrameBaru.index):
