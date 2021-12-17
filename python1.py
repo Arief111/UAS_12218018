@@ -22,7 +22,8 @@ DataCode = json.load(HandleCodeNegara)
 st.title("Welcome to Streamlit!")
 
 st.write("Our first DataFrame")
-aa = st.text_input("Please input Number Here")
+
+aa = st.text_input("Please input Text Here")
 def ConverterNegaraCode(Nama):
     j = 0
     CodeNegaraFul = str(0)
@@ -94,6 +95,7 @@ for i in (HandleFileProduksi.index):
 DataBaru1 = {"Nama Negara" : NamaBaru1,"Kode" : KodeBaru1, "Tahun" : TahunBaru1,
             "Produksi" : ProduksiBaru1, "Region" : RegionBaru1, "Sub-Region" : SubRegionBaru1}
 HandleFileProduksi1 = pd.DataFrame(DataBaru1)
+
 ProduksiBaru = [0]
 NamaBaru = [0]
 j = 0
@@ -171,8 +173,8 @@ DataBaru2 = {"Nama Negara" : NamaBaru1,"Kode" : KodeBaru1, "Tahun" : TahunBaru1,
             "Produksi" : ProduksiBaru1, "Region" : RegionBaru1, "Sub-Region" : SubRegionBaru1}
 HandleFileProduksiNol = pd.DataFrame(DataBaru2)
 
-print ("Pilih Menu")
-Token = int(input())
+print("Pilih Menu")
+Token = st.number_input("Pilih Menu")
 
 if(Token == 1):
     NamaNegara1 = input("Silahkan Inputkan Nama Negara: ")
