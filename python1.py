@@ -169,7 +169,7 @@ Token = st.selectbox("Select Menu yang Anda Inginkan :" , ["0. Default",
                                                           "3. Melihat Beberapa Negara Dengan Produksi Kumulatif Terbesar",
                                                           "4. Melihat Negara dengan Produksi Ekstrim (Produksi Maksimum, Minimum dan Nol) Pada Tahun Tertentu"])
 
-if("1. Melihat grafik Produksi Minyak Negara Tertentu"):
+if(Token == "1. Melihat grafik Produksi Minyak Negara Tertentu"):
     NamaNegara1 = st.text_input("Silahkan Inputkan Nama Negara")
     CodeNegaraFull = ConverterNegaraCode(NamaNegara1)
     st.write("Berikut Plot data Produksi Minyak dari Negara " + NamaNegara1 + " : ")
