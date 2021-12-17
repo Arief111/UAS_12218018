@@ -163,9 +163,13 @@ HandleFileProduksiNol = pd.DataFrame(DataBaru2)
 
 print("Pilih Menu")
 
-Token = st.selectbox("Select Menu yang Anda Inginkan :" , ["1. Melihat grafik Produksi minyak Negara Tertentu"])
+Token = st.selectbox("Select Menu yang Anda Inginkan :" , ["0. Default",
+                                                          "1. Melihat grafik Produksi Minyak Negara Tertentu",
+                                                          "2. Melihat Beberapa Negara Dengan Produksi Minyak Terbesar Pada Tahun Tertentu",
+                                                          "3. Melihat Beberapa Negara Dengan Produksi Kumulatif Terbesar",
+                                                          "4. Melihat Negara dengan Produksi Ekstrim (Produksi Maksimum, Minimum dan Nol) Pada Tahun Tertentu"])
 
-if(Token == 1):
+if("1. Melihat grafik Produksi Minyak Negara Tertentu"):
     NamaNegara1 = st.text_input("Silahkan Inputkan Nama Negara")
     CodeNegaraFull = ConverterNegaraCode(NamaNegara1)
     st.write("Berikut Plot data Produksi Minyak dari Negara " + NamaNegara1 + " : ")
@@ -175,7 +179,7 @@ if(Token == 1):
     except:
         st.write("Tidak ada data Produksi Minyak dari Negara " + str(NamaNegara1))
 
-elif(Token == 2):
+elif(Token == "2. Melihat Beberapa Negara Dengan Produksi Minyak Terbesar Pada Tahun Tertentu"):
     try:
         Ranking = st.number_input("Silahkan Masukkan Berapa Negara : ")
         Tahun = st.number_input("Silahkan Masukkan Tahun : ")
@@ -187,7 +191,7 @@ elif(Token == 2):
     except:
         st.write("Belum ada Data Valid yang Dapat Ditampilkan")
 
-elif(Token == 3):
+elif(Token == "3. Melihat Beberapa Negara Dengan Produksi Kumulatif Terbesar"):
     try :
         BanyakNegara = st.number_input("Silahkan Input Berapa Banyak Negara Dengan Produksi Terbesar yang Akan Ditampilkan : ")
         if (BanyakNegara < len(NamaBaru)) & (BanyakNegara > 0):
@@ -201,7 +205,7 @@ elif(Token == 3):
     except :
         st.write("Belum ada Data Valid yang Dapat Ditampilkan")
 
-elif (Token == 4):
+elif (Token == "4. Melihat Negara dengan Produksi Ekstrim (Produksi Maksimum, Minimum dan Nol) Pada Tahun Tertentu"):
     try :
         Tahun1 = st.number_input("Masukkan Tahun : ")
         DataFrameTahun1 = HandleFileProduksiTanpaNol.loc[HandleFileProduksiTanpaNol["Tahun"]==Tahun1]
