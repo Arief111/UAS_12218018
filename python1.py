@@ -176,7 +176,7 @@ if(Token == 1):
 
 elif(Token == 2): 
     Ranking = st.number_input("Silahkan Masukkan Berapa Negara : ")
-    Tahun = st.number_input("Silahkan Masukkan Tahun : "))
+    Tahun = st.number_input("Silahkan Masukkan Tahun : ")
     DataFrameTahun = HandleFileProduksi1.loc[HandleFileProduksi1["Tahun"]==Tahun]
     DataFrameTahunSort = DataFrameTahun.sort_values(["Produksi"], ascending=[0])
     st.write(DataFrameTahunSort[0:Ranking])
