@@ -198,8 +198,7 @@ elif(Token == 3):
         st.write("Masukkan angka yang valid")
 
 elif (Token == 4):
-    st.write("Masukkan Tahun : ", end='')
-    Tahun1 = st.number_input()
+    Tahun1 = st.number_input("Masukkan Tahun : ")
     DataFrameTahun1 = HandleFileProduksiTanpaNol.loc[HandleFileProduksiTanpaNol["Tahun"]==Tahun1]
     imax = DataFrameTahun1["Produksi"].idxmax()
     st.write("Nama Negara : ", end='')
