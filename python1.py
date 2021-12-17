@@ -174,14 +174,17 @@ if(Token == 1):
     except:
         st.write("Tidak ada data Produksi Minyak dari Negara " + str(NamaNegara1))
 
-elif(Token == 2): 
-    Ranking = st.number_input("Silahkan Masukkan Berapa Negara : ")
-    Tahun = st.number_input("Silahkan Masukkan Tahun : ")
-    DataFrameTahun = HandleFileProduksi1.loc[HandleFileProduksi1["Tahun"]==Tahun]
-    DataFrameTahunSort = DataFrameTahun.sort_values(["Produksi"], ascending=[0])
-    st.write(DataFrameTahunSort[0:Ranking])
-    DataFrameTahunSort[0:Ranking].plot(kind="bar",x="Nama Negara",y="Produksi",title ="Grafik Produksi Minyak " + str(Ranking) + " Negara Terbanyak di Tahun " + str(Tahun))
-    plt.show()
+elif(Token == 2):
+    try:
+        Ranking = st.number_input("Silahkan Masukkan Berapa Negara : ")
+        Tahun = st.number_input("Silahkan Masukkan Tahun : ")
+        DataFrameTahun = HandleFileProduksi1.loc[HandleFileProduksi1["Tahun"]==Tahun]
+        DataFrameTahunSort = DataFrameTahun.sort_values(["Produksi"], ascending=[0])
+        st.write(DataFrameTahunSort[0:Ranking])
+        DataFrameTahunSort[0:Ranking].plot(kind="bar",x="Nama Negara",y="Produksi",title ="Grafik Produksi Minyak " + str(Ranking) + " Negara Terbanyak di Tahun " + str(Tahun))
+        plt.show()
+    except:
+        st.write("Belum ada Data Valid yang Dapat Ditampilkan")
 
 elif(Token == 3):
     try :
@@ -195,7 +198,7 @@ elif(Token == 3):
         else :
             st.write("Maaf, Data Banyak Negara Tidak Valid, silahkan input kembali")
     except :
-        st.write("Masukkan angka yang valid")
+        st.write("Belum ada Data Valid yang Dapat Ditampilkan")
 
 elif (Token == 4):
     try :
@@ -230,14 +233,14 @@ elif (Token == 4):
         DataFrameTahun1 = HandleFileProduksiNol.loc[HandleFileProduksiNol["Tahun"]==Tahun1]
         imin = DataFrameTahun1["Produksi"].idxmin()
         st.write("Negara Dengan Penghasil Minyak Nol Pada Tahun " + str(Tahun1))
-        st.write ("Nama Negara : " + str(HandleFileProduksiNol.loc[imin, "Nama Negara"]))
-        st.write("Kode Negara : " + str(HandleFileProduksiNol.loc[imin, "Region"]))
-        st.write("Region : " + str(HandleFileProduksiNol.loc[imin, "Sub-Region"]))
-        st.write("Sub-Region : " + str(HandleFileProduksiNol.loc[imin, "Sub-Region"]))
-        st.write("Produksi Tahun " + str(Tahun1) + " : " + str(HandleFileProduksiNol.loc[imin, "Produksi"]))
+        st.write ("--Nama Negara : " + str(HandleFileProduksiNol.loc[imin, "Nama Negara"]))
+        st.write("--Kode Negara : " + str(HandleFileProduksiNol.loc[imin, "Region"]))
+        st.write("--Region : " + str(HandleFileProduksiNol.loc[imin, "Sub-Region"]))
+        st.write("--Sub-Region : " + str(HandleFileProduksiNol.loc[imin, "Sub-Region"]))
+        st.write("--Produksi Tahun " + str(Tahun1) + " : " + str(HandleFileProduksiNol.loc[imin, "Produksi"]))
         for i in (DataFrameBaru.index):
             if (HandleFileProduksiNol.loc[imin, "Nama Negara"] == DataFrameBaru.loc[i,"Nama Negara"]):
                 ProduksiKumulatif = DataFrameBaru.loc[i,"Produksi Kumulatif"]
-        st.write("Produksi Akumulatif : " + str(ProduksiKumulatif))
+        st.write("--Produksi Akumulatif : " + str(ProduksiKumulatif))
     except :
         st.write("Belum ada data valid yang dapat ditampilkan")
