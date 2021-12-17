@@ -162,7 +162,8 @@ HandleFileProduksiNol = pd.DataFrame(DataBaru2)
 '''Program Start'''
 
 print("Pilih Menu")
-Token = st.number_input("Pilih Menu")
+
+Token = st.selectbox("Select Menu yang Anda Inginkan :" , ["1. Melihat grafik Produksi minyak Negara Tertentu"])
 
 if(Token == 1):
     NamaNegara1 = st.text_input("Silahkan Inputkan Nama Negara")
