@@ -186,8 +186,7 @@ elif(Token == "2. Melihat Beberapa Negara Dengan Produksi Minyak Terbesar Pada T
         DataFrameTahun = HandleFileProduksi1.loc[HandleFileProduksi1["Tahun"]==Tahun]
         DataFrameTahunSort = DataFrameTahun.sort_values(["Produksi"], ascending=[0])
         st.write(DataFrameTahunSort[0:Ranking])
-        DataFrameTahunSort[0:Ranking].plot(kind="bar",x="Nama Negara",y="Produksi",title ="Grafik Produksi Minyak " + str(Ranking) + " Negara Terbanyak di Tahun " + str(Tahun))
-        plt.show()
+        
     except:
         st.write("Belum ada Data Valid yang Dapat Ditampilkan")
 
@@ -197,7 +196,7 @@ elif(Token == "3. Melihat Beberapa Negara Dengan Produksi Kumulatif Terbesar"):
         if (BanyakNegara < len(NamaBaru)) & (BanyakNegara > 0):
             show1 = DataFrameBaru[0:BanyakNegara]
             st.write(show1)
-            st.line_chart(show1)
+            st.pie_chart(show1)
         else :
             st.write("Belum ada Data Valid yang Dapat Ditampilkan")
     except :
