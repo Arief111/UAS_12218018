@@ -196,7 +196,7 @@ elif(Token == "3. Melihat Beberapa Negara Dengan Produksi Kumulatif Terbesar"):
         if (BanyakNegara < len(NamaBaru)) & (BanyakNegara > 0):
             show1 = DataFrameBaru[0:BanyakNegara]
             st.write(show1)
-            st.pie_chart(show1)
+            st.bar_chart(show1)
         else :
             st.write("Belum ada Data Valid yang Dapat Ditampilkan")
     except :
