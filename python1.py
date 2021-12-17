@@ -196,6 +196,8 @@ elif(Token == "3. Melihat Beberapa Negara Dengan Produksi Kumulatif Terbesar"):
         BanyakNegara = st.number_input("Silahkan Input Berapa Banyak Negara Dengan Produksi Terbesar yang Akan Ditampilkan : ", min_value = 0, step = 1)
         if (BanyakNegara < len(NamaBaru)) & (BanyakNegara > 0):
             show1 = DataFrameBaru[0:BanyakNegara]
+            show2 = pd.DataFrame(ProduksiBaru[0:BanyakNegara-1],Columns = NamaBaru[0:BanyakNegara-1])
+            st.bar_chart(show2)
         else :
             st.write("Belum ada Data Valid yang Dapat Ditampilkan")
     except :
