@@ -170,7 +170,7 @@ if(Token == 1):
     st.write("Berikut Plot data Produksi Minyak dari Negara " + NamaNegara1 + " : ")
     try:
         ats = HandleFileProduksi.loc[HandleFileProduksi["kode_negara"] == CodeNegaraFull]
-        st.line_chart(ats)
+        st.bar_chart(ats)
     except:
         print ("Tidak ada data Produksi Minyak dari Negara " + str(NamaNegara1))
 
