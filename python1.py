@@ -159,11 +159,13 @@ DataBaru2 = {"Nama Negara" : NamaBaru1,"Kode" : KodeBaru1, "Tahun" : TahunBaru1,
             "Produksi" : ProduksiBaru1, "Region" : RegionBaru1, "Sub-Region" : SubRegionBaru1}
 HandleFileProduksiNol = pd.DataFrame(DataBaru2)
 
+'''Program Start'''
+
 print("Pilih Menu")
 Token = st.number_input("Pilih Menu")
 
 if(Token == 1):
-    NamaNegara1 = input("Silahkan Inputkan Nama Negara: ")
+    NamaNegara1 = st.text_input("Silahkan Inputkan Nama Negara")
     CodeNegaraFull = ConverterNegaraCode(NamaNegara1)
     st.write("Berikut Plot data Produksi Minyak dari Negara " + NamaNegara1 + " : ")
     try:
