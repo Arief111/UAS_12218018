@@ -10,9 +10,8 @@ HandleCodeNegara = open("D:/kode_negara_lengkap.json")
 HandleFileProduksi = pd.read_csv("D:/produksi_minyak_mentah.csv")
 DataCode = json.load(HandleCodeNegara)
 
-col1,col2 = st.columns(2)
-col1.write("this is column1")
-col2.write("this is column2")
+c = st.empty()
+st.write("This will show last)
 
 def ConverterNegaraCode(Nama):
     j = 0
