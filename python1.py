@@ -7,7 +7,7 @@ from pandas.core.frame import DataFrame
 
 
 from pandas.io.formats.format import DataFrameFormatter
-st.title("Aplikasi Penghitung Minyak")
+st.title("Aplikasi Penghitung Produksi Minyak")
 HandleCodeNegara = open("kode_negara_lengkap.json")
 HandleFileProduksi = pd.read_csv("produksi_minyak_mentah.csv")
 DataCode = json.load(HandleCodeNegara)
