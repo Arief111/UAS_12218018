@@ -200,9 +200,10 @@ elif(Token == 3):
 elif (Token == 4):
     try :
         Tahun1 = st.number_input("Masukkan Tahun : ")
-        st.write("Negara Dengan Penghasil Minyak Terbanyak Pada Tahun " + str(Tahun1))
         DataFrameTahun1 = HandleFileProduksiTanpaNol.loc[HandleFileProduksiTanpaNol["Tahun"]==Tahun1]
         imax = DataFrameTahun1["Produksi"].idxmax()
+        a = HandleFileProduksiTanpaNol.loc[imax, "Nama Negara"]
+        st.write("Negara Dengan Penghasil Minyak Terbanyak Pada Tahun " + str(Tahun1))
         st.write("--Nama Negara : " + str(HandleFileProduksiTanpaNol.loc[imax, "Nama Negara"]))
         st.write("--Kode Negara : " + str(HandleFileProduksiTanpaNol.loc[imax, "Region"]))
         st.write("--Region : " + str(HandleFileProduksiTanpaNol.loc[imax, "Sub-Region"]))
