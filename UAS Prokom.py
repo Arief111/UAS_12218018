@@ -13,12 +13,6 @@ st.title("Welcome to Streamlit!")
 
 st.write("Our first DataFrame")
 
-st.write(
-  pd.DataFrame({
-      'A': [1, 2, 3, 4],
-      'B': [5, 6, 7, 8]
-    })
-)
 
 def ConverterNegaraCode(Nama):
     j = 0
@@ -171,7 +165,7 @@ HandleFileProduksiNol = pd.DataFrame(DataBaru2)
 
 print ("Pilih Menu")
 Token = int(input())
-
+'''
 if(Token == 1):
     NamaNegara1 = input("Silahkan Inputkan Nama Negara: ")
     CodeNegaraFull = ConverterNegaraCode(NamaNegara1)
@@ -268,3 +262,4 @@ elif (Token == 4):
         if (HandleFileProduksiNol.loc[imin, "Nama Negara"] == DataFrameBaru.loc[i,"Nama Negara"]):
             ProduksiKumulatif = DataFrameBaru.loc[i,"Produksi Kumulatif"]
     print(ProduksiKumulatif)
+'''
