@@ -19,7 +19,7 @@ DataCode = json.load(HandleCodeNegara)
 st.title("Welcome to Streamlit!")
 
 st.write("Our first DataFrame")
-'''
+
 def ConverterNegaraCode(Nama):
     j = 0
     CodeNegaraFul = str(0)
@@ -171,8 +171,7 @@ HandleFileProduksiNol = pd.DataFrame(DataBaru2)
 
 print ("Pilih Menu")
 Token = int(input())
-'''
-'''
+
 if(Token == 1):
     NamaNegara1 = input("Silahkan Inputkan Nama Negara: ")
     CodeNegaraFull = ConverterNegaraCode(NamaNegara1)
@@ -269,4 +268,3 @@ elif (Token == 4):
         if (HandleFileProduksiNol.loc[imin, "Nama Negara"] == DataFrameBaru.loc[i,"Nama Negara"]):
             ProduksiKumulatif = DataFrameBaru.loc[i,"Produksi Kumulatif"]
     print(ProduksiKumulatif)
- '''
