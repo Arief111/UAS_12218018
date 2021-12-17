@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import json
 from pandas.core.frame import DataFrame
+pip install awesome-streamlit
 
 from pandas.io.formats.format import DataFrameFormatter
 
