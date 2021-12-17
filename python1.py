@@ -1,26 +1,25 @@
 import pandas as pd
 import streamlit as st
+import matplotlib.pyplot as plt
+import json
+from pandas.core.frame import DataFrame
 
+from pandas.io.formats.format import DataFrameFormatter
 st.title("Welcome to Streamlit!")
 
 st.write("Our first DataFrame")
 
 st.write(pd.DataFrame({'Saya': ["Arief"],'Pacar': ["Hoa"]}))
 #Kotnr
-import matplotlib.pyplot as plt
-import json
-from pandas.core.frame import DataFrame
 
-from pandas.io.formats.format import DataFrameFormatter
-
-HandleCodeNegara = open("D:/kode_negara_lengkap.json")
-HandleFileProduksi = pd.read_csv("D:/produksi_minyak_mentah.csv")
+HandleCodeNegara = open("kode_negara_lengkap.json")
+HandleFileProduksi = pd.read_csv("produksi_minyak_mentah.csv")
 DataCode = json.load(HandleCodeNegara)
 
 st.title("Welcome to Streamlit!")
 
 st.write("Our first DataFrame")
-
+'''
 def ConverterNegaraCode(Nama):
     j = 0
     CodeNegaraFul = str(0)
@@ -270,4 +269,4 @@ elif (Token == 4):
         if (HandleFileProduksiNol.loc[imin, "Nama Negara"] == DataFrameBaru.loc[i,"Nama Negara"]):
             ProduksiKumulatif = DataFrameBaru.loc[i,"Produksi Kumulatif"]
     print(ProduksiKumulatif)
-'''
+ '''
