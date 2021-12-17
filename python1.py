@@ -201,7 +201,7 @@ elif (Token == 4):
     Tahun1 = st.number_input("Masukkan Tahun : ")
     DataFrameTahun1 = HandleFileProduksiTanpaNol.loc[HandleFileProduksiTanpaNol["Tahun"]==Tahun1]
     imax = DataFrameTahun1["Produksi"].idxmax()
-    st.write("Nama Negara : ", end='')
+    st.write("Nama Negara : " + str(HandleFileProduksiTanpaNol.loc[imax, "Nama Negara"])
     st.write(HandleFileProduksiTanpaNol.loc[imax, "Nama Negara"])
     st.write("Kode Negara : ", end='')
     st.write(HandleFileProduksiTanpaNol.loc[imax, "Region"])
