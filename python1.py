@@ -2,8 +2,9 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import json
-from pandas.core.frame import DataFrame
 import plotly.graph_objects as go
+from pandas.core.frame import DataFrame
+
 
 from pandas.io.formats.format import DataFrameFormatter
 st.title("Aplikasi Penghitung Minyak")
