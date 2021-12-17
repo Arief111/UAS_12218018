@@ -3,27 +3,22 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import json
 from pandas.core.frame import DataFrame
-pip install awesome-streamlit
 
 from pandas.io.formats.format import DataFrameFormatter
 
 HandleCodeNegara = open("D:/kode_negara_lengkap.json")
 HandleFileProduksi = pd.read_csv("D:/produksi_minyak_mentah.csv")
 DataCode = json.load(HandleCodeNegara)
+st.title("Welcome to Streamlit!")
 
-st.title("Streamlit 101: An in-depth introduction")
-st.markdown("Welcome to this in-depth introduction to [Streamlit](www.streamlit.io)! For this exercise, we'll use an Airbnb [dataset](http://data.insideairbnb.com/united-states/ny/new-york-city/2019-09-12/visualisations/listings.csv) containing NYC listings.")
-st.header("Customary quote")
-st.markdown("> I just love to go home, no matter where I am, the most luxurious hotel suite in the world, I love to go home.\n\n—Michael Caine")
-st.header("Airbnb NYC listings: data at a glance")
-st.markdown("The first five records of the Airbnb data we downloaded.")
-st.dataframe(df.head())
-st.header("Caching our data")
-st.markdown("Streamlit has a handy decorator [`st.cache`](https://streamlit.io/docs/api.html#optimize-performance) to enable data caching.")
-st.code("""
+st.write("Our first DataFrame")
 
-c = st.empty()
-st.write("This will show last)
+st.write(
+  pd.DataFrame({
+      'A': [1, 2, 3, 4],
+      'B': [5, 6, 7, 8]
+    })
+)
 
 def ConverterNegaraCode(Nama):
     j = 0
