@@ -5,25 +5,11 @@ import json
 from pandas.core.frame import DataFrame
 
 from pandas.io.formats.format import DataFrameFormatter
-st.title("Welcome to Streamlit!")
-
-st.write("Our first DataFrame")
-
-st.write(pd.DataFrame({'Saya': ["Arief"],'Pacar': ["Hoa"]}))
-#Kotnr
-
-number = st.number_input('Insert a number')
-st.write('The current number is ', number)
-
+st.title("Aplikasi Penghitung Minyak")
 HandleCodeNegara = open("kode_negara_lengkap.json")
 HandleFileProduksi = pd.read_csv("produksi_minyak_mentah.csv")
 DataCode = json.load(HandleCodeNegara)
 
-st.title("Welcome to Streamlit!")
-
-st.write("Our first DataFrame")
-
-aa = st.text_input("Please input Text Here")
 def ConverterNegaraCode(Nama):
     j = 0
     CodeNegaraFul = str(0)
