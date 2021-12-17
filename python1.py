@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import json
+imnport numpy as np
 from pandas.core.frame import DataFrame
 
 
