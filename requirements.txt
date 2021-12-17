@@ -1,3 +1,4 @@
 pandas
 matplotlib
 streamlit==0.79.0 # will fail on RPi, comment out
+Numpy
