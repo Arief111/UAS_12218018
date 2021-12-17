@@ -201,7 +201,7 @@ elif(Token == "3. Melihat Beberapa Negara Dengan Produksi Kumulatif Terbesar"):
             st.write("Berikut " + str(BanyakNegara) + " Negara Dengan Produksi Kumulatif Terbesar :")
             st.write(show1)
         else :
-            st.write("Maaf, Data Banyak Negara Tidak Valid, silahkan input kembali")
+            st.write("Belum ada Data Valid yang Dapat Ditampilkan")
     except :
         st.write("Belum ada Data Valid yang Dapat Ditampilkan")
 
