@@ -22,7 +22,7 @@ DataCode = json.load(HandleCodeNegara)
 st.title("Welcome to Streamlit!")
 
 st.write("Our first DataFrame")
-
+aa = st.text_input("Please input Number Here")
 def ConverterNegaraCode(Nama):
     j = 0
     CodeNegaraFul = str(0)
