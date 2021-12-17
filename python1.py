@@ -214,7 +214,7 @@ elif (Token == 4):
 
     DataFrameTahun1 = HandleFileProduksiTanpaNol.loc[HandleFileProduksiTanpaNol["Tahun"]==Tahun1]
     imin = DataFrameTahun1["Produksi"].idxmin()
-    st.write("  Negara Dengan Penghasil Minyak Terkecil (Bukan Nol) Pada Tahun " + str(Tahun1))
+    st.write("Negara Dengan Penghasil Minyak Terkecil (Bukan Nol) Pada Tahun " + str(Tahun1))
     st.write("  Nama Negara         : " + str(HandleFileProduksiTanpaNol.loc[imin, "Nama Negara"]))
     st.write("  Kode Negara         : " + str(HandleFileProduksiTanpaNol.loc[imin, "Region"]))
     st.write("  Region              : " + str(HandleFileProduksiTanpaNol.loc[imin, "Sub-Region"]))
