@@ -165,8 +165,7 @@ Token = st.number_input("Pilih Menu")
 if(Token == 1):
     NamaNegara1 = input("Silahkan Inputkan Nama Negara: ")
     CodeNegaraFull = ConverterNegaraCode(NamaNegara1)
-    print (CodeNegaraFull)
-    print("Berikut Plot data Produksi Minyak dari Negara " + NamaNegara1 + " : ")
+    st.write("Berikut Plot data Produksi Minyak dari Negara " + NamaNegara1 + " : ")
     try:
         ats = HandleFileProduksi.loc[HandleFileProduksi["kode_negara"] == CodeNegaraFull]
         ats.plot(kind="line",x="tahun",y="produksi",title="Grafik Produksi Minyak Negara " + str(NamaNegara1))
