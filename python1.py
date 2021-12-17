@@ -199,35 +199,31 @@ elif(Token == 3):
 
 elif (Token == 4):
     Tahun1 = st.number_input("Masukkan Tahun : ")
+    st.write("Negara Dengan Penghasil Minyak Terbanyak Pada Tahun " + str(Tahun1))
     DataFrameTahun1 = HandleFileProduksiTanpaNol.loc[HandleFileProduksiTanpaNol["Tahun"]==Tahun1]
     imax = DataFrameTahun1["Produksi"].idxmax()
-    st.write("Nama Negara : " + str(HandleFileProduksiTanpaNol.loc[imax, "Nama Negara"]))
-    st.write("Kode Negara : " + str(HandleFileProduksiTanpaNol.loc[imax, "Region"]))
-    st.write("Region : " + str(HandleFileProduksiTanpaNol.loc[imax, "Sub-Region"]))
-    st.write("Sub-Region : " + str(HandleFileProduksiTanpaNol.loc[imax, "Sub-Region"]))
-    st.write("Produksi Tahun " + str(Tahun1) + " : " + str(HandleFileProduksiTanpaNol.loc[imax, "Produksi"]))
+    st.write("  Nama Negara : " + str(HandleFileProduksiTanpaNol.loc[imax, "Nama Negara"]))
+    st.write("  Kode Negara : " + str(HandleFileProduksiTanpaNol.loc[imax, "Region"]))
+    st.write("  Region : " + str(HandleFileProduksiTanpaNol.loc[imax, "Sub-Region"]))
+    st.write("  Sub-Region : " + str(HandleFileProduksiTanpaNol.loc[imax, "Sub-Region"]))
+    st.write("  Produksi Tahun " + str(Tahun1) + " : " + str(HandleFileProduksiTanpaNol.loc[imax, "Produksi"]))
     for i in (DataFrameBaru.index):
         if (HandleFileProduksiTanpaNol.loc[imax, "Nama Negara"] == DataFrameBaru.loc[i,"Nama Negara"]):
             ProduksiKumulatif = DataFrameBaru.loc[i,"Produksi Kumulatif"]
-    st.write("Produksi Akumulatif : " + str(ProduksiKumulatif))
+    st.write("  Produksi Akumulatif : " + str(ProduksiKumulatif))
 
     DataFrameTahun1 = HandleFileProduksiTanpaNol.loc[HandleFileProduksiTanpaNol["Tahun"]==Tahun1]
     imin = DataFrameTahun1["Produksi"].idxmin()
-    st.write("Nama Negara : ", end='')
-    st.write(HandleFileProduksiTanpaNol.loc[imin, "Nama Negara"])
-    st.write("Kode Negara : ", end='')
-    st.write(HandleFileProduksiTanpaNol.loc[imin, "Region"])
-    st.write("Region : ", end='')
-    st.write(HandleFileProduksiTanpaNol.loc[imin, "Sub-Region"])
-    st.write("Sub-Region : ", end='')
-    st.write(HandleFileProduksiTanpaNol.loc[imin, "Sub-Region"])
-    st.write("Produksi Tahun " + str(Tahun1) + " : ", end='')
-    st.write(HandleFileProduksiTanpaNol.loc[imin, "Produksi"])
-    st.write("Produksi Akumulatif : ", end='')
+    st.write("  Negara Dengan Penghasil Minyak Terkecil (Bukan Nol) Pada Tahun " + str(Tahun1))
+    st.write("  Nama Negara         : " + str(HandleFileProduksiTanpaNol.loc[imin, "Nama Negara"]))
+    st.write("  Kode Negara         : " + str(HandleFileProduksiTanpaNol.loc[imin, "Region"]))
+    st.write("  Region              : " + str(HandleFileProduksiTanpaNol.loc[imin, "Sub-Region"]))
+    st.write("  Sub-Region          : " + str(HandleFileProduksiTanpaNol.loc[imin, "Sub-Region"]))
+    st.write("  Produksi Tahun " + str(Tahun1) + "      : " + str(HandleFileProduksiTanpaNol.loc[imin, "Produksi"]))
     for i in (DataFrameBaru.index):
         if (HandleFileProduksiTanpaNol.loc[imin, "Nama Negara"] == DataFrameBaru.loc[i,"Nama Negara"]):
             ProduksiKumulatif = DataFrameBaru.loc[i,"Produksi Kumulatif"]
-    st.write(ProduksiKumulatif)
+    st.write("  Produksi Akumulatif : " + str(ProduksiKumulatif))
 
     DataFrameTahun1 = HandleFileProduksiNol.loc[HandleFileProduksiNol["Tahun"]==Tahun1]
     imin = DataFrameTahun1["Produksi"].idxmin()
