@@ -198,7 +198,6 @@ elif(Token == "3. Melihat Beberapa Negara Dengan Produksi Kumulatif Terbesar"):
         if (BanyakNegara < len(NamaBaru)) & (BanyakNegara > 0):
             show1 = DataFrameBaru[0:BanyakNegara]
             st.write(show1)
-            for i in range(
             show2 = pd.DataFrame(np.random.randn(20,BanyakNegara),Columns = NamaBaru[0:BanyakNegara-1])
             st.bar_chart(show2)
         else :
